@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A52FFBED2EF54C7B0094B1E1 /* Pods_GemmaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF3136E69BE7D41154C1794 /* Pods_GemmaChat.framework */; };
-		A52FFBEE2EF54C7B0094B1E1 /* Pods_GemmaChat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF3136E69BE7D41154C1794 /* Pods_GemmaChat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34F685602CDDB19CD1228D66 /* Pods_GemmaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D75F60D924C3D61AE94399 /* Pods_GemmaChat.framework */; };
 		A56E47D22EF55ADD00C9F845 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56E47D12EF55ADD00C9F845 /* Accelerate.framework */; };
 		A56E47D42EF55AE500C9F845 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56E47D32EF55AE500C9F845 /* CoreVideo.framework */; };
 		A56E47D62EF55AEC00C9F845 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56E47D52EF55AEC00C9F845 /* CoreGraphics.framework */; };
@@ -21,7 +20,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A52FFBEE2EF54C7B0094B1E1 /* Pods_GemmaChat.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,13 +27,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0BF3136E69BE7D41154C1794 /* Pods_GemmaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GemmaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		36C6C31DB2180F49186E386B /* Pods-GemmaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemmaChat.debug.xcconfig"; path = "Target Support Files/Pods-GemmaChat/Pods-GemmaChat.debug.xcconfig"; sourceTree = "<group>"; };
-		50AB9C3BA76E459940044387 /* Pods-GemmaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemmaChat.release.xcconfig"; path = "Target Support Files/Pods-GemmaChat/Pods-GemmaChat.release.xcconfig"; sourceTree = "<group>"; };
+		1F7AC7CAA23413B9B7E6B3C1 /* Pods-GemmaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemmaChat.debug.xcconfig"; path = "Target Support Files/Pods-GemmaChat/Pods-GemmaChat.debug.xcconfig"; sourceTree = "<group>"; };
+		64D75F60D924C3D61AE94399 /* Pods_GemmaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GemmaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5152B1B2EF45ACC00C86C7A /* GemmaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GemmaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56E47D12EF55ADD00C9F845 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A56E47D32EF55AE500C9F845 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		A56E47D52EF55AEC00C9F845 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E9BDB4ACF773B1884A636B89 /* Pods-GemmaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemmaChat.release.xcconfig"; path = "Target Support Files/Pods-GemmaChat/Pods-GemmaChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,9 +50,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A56E47D62EF55AEC00C9F845 /* CoreGraphics.framework in Frameworks */,
-				A52FFBED2EF54C7B0094B1E1 /* Pods_GemmaChat.framework in Frameworks */,
 				A56E47D22EF55ADD00C9F845 /* Accelerate.framework in Frameworks */,
 				A56E47D42EF55AE500C9F845 /* CoreVideo.framework in Frameworks */,
+				34F685602CDDB19CD1228D66 /* Pods_GemmaChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +62,8 @@
 		9FF5F743B828F33C19372838 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				36C6C31DB2180F49186E386B /* Pods-GemmaChat.debug.xcconfig */,
-				50AB9C3BA76E459940044387 /* Pods-GemmaChat.release.xcconfig */,
+				1F7AC7CAA23413B9B7E6B3C1 /* Pods-GemmaChat.debug.xcconfig */,
+				E9BDB4ACF773B1884A636B89 /* Pods-GemmaChat.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -94,7 +92,7 @@
 				A56E47D52EF55AEC00C9F845 /* CoreGraphics.framework */,
 				A56E47D32EF55AE500C9F845 /* CoreVideo.framework */,
 				A56E47D12EF55ADD00C9F845 /* Accelerate.framework */,
-				0BF3136E69BE7D41154C1794 /* Pods_GemmaChat.framework */,
+				64D75F60D924C3D61AE94399 /* Pods_GemmaChat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,7 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5152B262EF45ACE00C86C7A /* Build configuration list for PBXNativeTarget "GemmaChat" */;
 			buildPhases = (
-				846C1838549D1F77DC1C7BCC /* [CP] Check Pods Manifest.lock */,
+				929A6CE57EEC48EC6476A7BE /* [CP] Check Pods Manifest.lock */,
 				A5152B172EF45ACC00C86C7A /* Sources */,
 				A5152B182EF45ACC00C86C7A /* Frameworks */,
 				A5152B192EF45ACC00C86C7A /* Resources */,
@@ -169,7 +167,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		846C1838549D1F77DC1C7BCC /* [CP] Check Pods Manifest.lock */ = {
+		929A6CE57EEC48EC6476A7BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,7 +343,7 @@
 		};
 		A5152B272EF45ACE00C86C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36C6C31DB2180F49186E386B /* Pods-GemmaChat.debug.xcconfig */;
+			baseConfigurationReference = 1F7AC7CAA23413B9B7E6B3C1 /* Pods-GemmaChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,7 +395,7 @@
 		};
 		A5152B282EF45ACE00C86C7A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50AB9C3BA76E459940044387 /* Pods-GemmaChat.release.xcconfig */;
+			baseConfigurationReference = E9BDB4ACF773B1884A636B89 /* Pods-GemmaChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
