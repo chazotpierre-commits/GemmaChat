@@ -10,3 +10,4 @@ xcuserdata/
 *.xcsettings
 =======
 >>>>>>> 9beb2bd (Ignore Xcode user files)
+*.task
