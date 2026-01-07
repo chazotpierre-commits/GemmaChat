@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 platform :ios, '26.0'
+=======
+platform :ios, '17.0'
+>>>>>>> 60b3b5f (Fresh start without heavy files)
 target 'GemmaChat' do
   use_frameworks!
   pod 'MediaPipeTasksGenAI'
@@ -11,4 +15,8 @@ post_install do |installer|
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
     end
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 60b3b5f (Fresh start without heavy files)

@@ -16,6 +16,10 @@ SPEC CHECKSUMS:
   MediaPipeTasksGenAI: 076ba7032a6e9da16db9c7cf0c3b67c751c18bc1
   MediaPipeTasksGenAIC: ec35d9f431f6a6b651a0bc9f67a4ed149ffa575c
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: eb82425030a6f746f54913fe24dbb2312713d913
+=======
+PODFILE CHECKSUM: 6e62c500bff89fc9b73211a760283ecf8256cdcb
+>>>>>>> 60b3b5f (Fresh start without heavy files)
 
 COCOAPODS: 1.16.2

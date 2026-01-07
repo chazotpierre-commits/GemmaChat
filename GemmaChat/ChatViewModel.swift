@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+=======
+//
+//  ChatViewModel.swift
+//  GemmaChat
+//
+//  Created by Pierre Chazot on 18/12/2025.
+//
+
+>>>>>>> 60b3b5f (Fresh start without heavy files)
 import SwiftUI
 import Combine
 import MediaPipeTasksGenAI
 import MediaPipeTasksGenAIC
 
+<<<<<<< HEAD
 @MainActor
 class ChatViewModel: ObservableObject {
     @Published var messages: [(text: String, isUser: Bool)] = []
@@ -58,6 +69,67 @@ class ChatViewModel: ObservableObject {
                     isGenerating = false
                 }
             }
+=======
+struct ChatMessage: Identifiable {
+    let id = UUID()
+    var text: String
+    let isUser: Bool
+}
+
+class ChatViewModel: ObservableObject {
+    @Published var messages: [ChatMessage] = []
+    @Published var inputText: String = ""
+    @Published var isModelLoading = false
+    
+    // This is the function the View was complaining about
+    @MainActor
+    func setupModel() async {
+        print("DEBUG: OS_READY")
+    }
+
+    func sendMessage() {
+        let text = inputText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !text.isEmpty, !isModelLoading else { return }
+        
+        isModelLoading = true
+        messages.append(ChatMessage(text: text, isUser: true))
+        messages.append(ChatMessage(text: "ANALYZING...", isUser: false))
+        
+        let lastIdx = messages.count - 1
+        inputText = ""
+        
+        Task.detached(priority: .userInitiated) {
+            do {
+                guard let modelPath = Bundle.main.path(forResource: "gemma3-1B-it-int4", ofType: "task") else { return }
+                
+                let options = LlmInference.Options(modelPath: modelPath)
+                options.maxTokens = 256
+                
+                let engine = try LlmInference(options: options)
+                let prompt = "<start_of_turn>user\n\(text)<end_of_turn>\n<start_of_turn>model\n"
+                let stream = engine.generateResponseAsync(inputText: prompt)
+                
+                var currentText = ""
+                for try await partial in stream {
+                    currentText += partial
+                    let textToUpdate = currentText
+                    
+                    await MainActor.run {
+                        // Crucial: Check indices to avoid crashes
+                        if self.messages.indices.contains(lastIdx) {
+                            self.messages[lastIdx].text = textToUpdate
+                        }
+                    }
+                }
+            } catch {
+                await MainActor.run {
+                    if self.messages.indices.contains(lastIdx) {
+                        self.messages[lastIdx].text = "ERROR: \(error.localizedDescription)"
+                    }
+                }
+            }
+            await MainActor.run { self.isModelLoading = false }
+>>>>>>> 60b3b5f (Fresh start without heavy files)
         }
     }
 }

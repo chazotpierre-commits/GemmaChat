@@ -3,3 +3,7 @@ Pods/
 *.a
 *.xcframework
 
+.DS_Store
+xcuserdata/
+*.xcuserstate
+*.xcsettings
