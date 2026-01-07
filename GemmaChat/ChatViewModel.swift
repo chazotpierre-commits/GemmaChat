@@ -59,9 +59,9 @@ final class ChatViewModel: ObservableObject {
 
         do {
             try await engine.loadModel()
-            messages.append(ChatMessage(text: "✅ Model loaded.", isUser: false))
+            messages.append(ChatMessage(text: "[SYSTEM] model ready", isUser: false))
         } catch {
-            messages.append(ChatMessage(text: "❌ Model load failed: \(error.localizedDescription)", isUser: false))
+            messages.append(ChatMessage(text: "Model load failed: \(error.localizedDescription)", isUser: false))
         }
     }
 
